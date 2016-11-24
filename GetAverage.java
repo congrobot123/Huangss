@@ -5,6 +5,7 @@ import java.util.Iterator;
 
 public class GetAverage 
 {
+	//没必要使用成员变量就不要使用成员变量，成员变量它是这个类的属性，只有是这个类属性才使用成员变量
 	static int  randnum;
 
 	public static void main(String[] args) 
@@ -18,7 +19,7 @@ public class GetAverage
 			});
 		
 		Scanner scan = new Scanner(System.in);
-		System.out.print("������һ������:");
+		System.out.print("请输入一个整数:");
 		int m = scan.nextInt();
 
 		Random r = new Random(m);
@@ -28,7 +29,7 @@ public class GetAverage
 			randnums.add(randnum);
 		}
 
-		System.out.print("��������Ľ��:");
+		System.out.print("定制排序的结果:");
 		Iterator it = randnums.iterator();
 		while(it.hasNext())
 		{
@@ -37,6 +38,6 @@ public class GetAverage
 			System.out.print(rand + " ");
 		}
 		System.out.println();
-		System.out.print( m + "������ƽ����:" + sum/m);
+		System.out.print( m + "个数的平均数:" + sum/m);
 	}
 }
